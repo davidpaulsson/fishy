@@ -22,4 +22,4 @@
     Piranha CMS, HTML5, 
     CSS3(SASS & Compass), 
     jQuery, Modernizr,
-    fitvid.js
+    fitvid.js, navobile.js
