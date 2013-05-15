@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.headings,
+nav[role="navigation"],
+.mobile-header-bar .wrapper,
+.main-container,
+footer.wrapper {
+	@include container;
+
+	@include at-breakpoint($medium) {
+		@include container;
+	}
+
+	@include at-breakpoint($large) {
+		@include container;
+	}
+}
+
+.main-container {
+	.main {
+		padding-top: 2em;
+
+		@include at-breakpoint($medium) {
+			@include span-columns(5,8);
+			padding-top: 0;
+		}
+
+		@include at-breakpoint($large) {
+			@include span-columns(8,12);
+		}
+	}
+	
+	.sidebar {
+		@include at-breakpoint($medium) {
+			@include span-columns(3 omega,8);
+		}
+
+		@include at-breakpoint($large) {
+			@include span-columns(4 omega,12);
+		}
+	}
+}

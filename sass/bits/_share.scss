@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Share
+   ========================================================================== */
+
+.share {
+	list-style-type: none;
+	font-family: "entypo-social";
+	font-size: 2em;
+	margin: 0;
+
+	.share-this {
+		font-size: 14px;
+	}
+
+	li {
+		display: inline-block;
+		float: left;
+
+		&.share-this {
+			background-color: $blue;
+			color: $white;
+			font-family: "entypo";
+			font-size: 1em;
+			padding: 10px;
+
+			@include at-breakpoint($medium) {
+				padding: 10px 20px;
+			}
+			
+			&:hover {
+				background-color: $orange;
+				cursor: pointer;
+			}
+		}
+
+		a {
+			display: block;
+			padding: 10px;
+			font-weight: 300;
+			color: $white;
+
+			@include at-breakpoint($medium) {
+				padding: 10px 20px;
+			}
+		}
+	}
+
+	.twitter {
+		background-color: lighten(desaturate($twitter, 20), 10);
+
+		&:hover {
+			background-color: lighten(desaturate($twitter, 20), 20);
+		}
+	}
+	.facebook {
+		background-color: lighten(desaturate($facebook, 20), 10);
+
+		&:hover {
+			background-color: lighten(desaturate($facebook, 20), 20);
+		}
+	}
+	.gplus {
+		background-color: lighten(desaturate($gplus, 20), 10);
+
+		&:hover {
+			background-color: lighten(desaturate($gplus, 20), 20);
+		}
+	}
+	.linkedin {
+		background-color: lighten(desaturate($linkedin, 20), 10);
+
+		&:hover {
+			background-color: lighten(desaturate($linkedin, 20), 20);
+		}
+	}
+}

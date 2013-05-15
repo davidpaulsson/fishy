@@ -1,0 +1,133 @@
+/* ==========================================================================
+   Widgets
+   ========================================================================== */
+
+.widget-ul {
+	@include trailer();
+	font-family: $font-sans;
+	color: $blue;
+
+	h3 {
+		@extend h5;
+		background-color: $blueLight;
+		height: ($gutter-width+1.1em);
+		color: $white;
+		padding-left: 20px;
+		line-height: ($gutter-width+1.1em);
+
+		&:hover {
+			cursor: pointer;
+			background-color: lighten($blueLight,5%);
+
+			&:after {
+				background-color: lighten($blue,5%);
+			}
+		}
+
+		&:after {
+			content: "";
+			color: $black;
+			font-family: "entypo";
+			float: right;
+			width: ($gutter-width+1.1em);
+			height: ($gutter-width+1.1em);
+			text-align: center;
+			background-color: $blue;
+		}
+		&.active:after {
+			content: "";
+		}
+	}
+}
+
+.widget-body {
+	display: none;
+	background-color: $white;
+
+	li {
+		border-bottom: 1px solid $blueLighter;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	a {
+		color: $blue;
+		display: block;
+		padding: ($gutter-width/2) 20px;
+		font-weight: 300;
+
+		&:hover {
+			color: darken($blue,10%);
+			background-color: lighten($blueLighter,5%)
+		}
+
+		span {
+			float: right;
+			font-weight: 300;
+		}
+	}
+
+	&.tab1 {
+		display: block;
+	}
+
+	.post {
+		@include clearfix;
+		font-family: $font-sans;
+
+		padding: 1em 20px;
+
+		a {
+			color: $orange;
+			padding: 0;
+
+			&:hover {
+				background-color: transparent;
+			}
+		}
+
+		span {
+			@include adjust-font-size-to(14px);
+			color: $blueLight;
+		}
+
+		img {
+			float: right;
+			// margin: 0 0 20px 20px;
+		}
+
+		&:hover {
+			background-color: lighten($blueLighter,5%);
+		}
+	}
+}
+
+.widget-tabs {
+	.tabs {
+		@include clearfix;
+	}
+
+	h3 {
+		@extend h5;
+		display: inline-block;
+		cursor: pointer;
+		clear: none;
+		float: left;
+		text-align: center;
+		background-color: $blueLight;
+		height: ($gutter-width+1.1em);
+		color: $white;
+		line-height: ($gutter-width+1.1em);
+
+		&:hover {
+			background-color: lighten($blueLight,5%);
+		}
+
+		&.active {
+			background-color: $white;
+			color: $blueLight;
+		}
+	}
+}

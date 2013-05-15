@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Article
+   ========================================================================== */
+
+article {
+	@include trailer(4);
+	@include clearfix;
+
+	header,
+	section,
+	footer {
+		@include clearfix;
+		clear: both;
+	}
+
+	footer {
+		@include leader();
+	}
+}
+
+.meta {
+	@include adjust-font-size-to(14px);
+	color: $blueLight;
+	font-family: $font-sans;
+	margin-bottom: 0;
+
+	&.time:before {
+		color: $blue;
+		content: "🕔 ";
+		font-family: "entypo";
+		font-weight: 300;
+		font-size: 2em;
+	}
+
+	&.cat {
+		// @include trailer();
+		margin-bottom: rhythm(1,9px);
+		&:before {
+			color: $blue;
+			content: " ";
+			font-family: "entypo";
+			font-weight: 300;
+			font-size: 2em;
+		}
+	}
+	a {
+		color: $blue;
+
+		&:hover {
+			color: lighten($blue,10%);
+		}
+	}	
+}
+
+
+.type {
+	display: none;
+
+	@include at-breakpoint($large) {
+		@include border-radius(60px);
+		font-family: 'entypo';
+		background-color: $blueLight;
+		display: block;
+		position: absolute;
+		color: $white;
+		// margin-top: -1.5em;
+		margin-left: -1.5em;
+		height: 60px;
+		width: 60px;
+		text-align: center;
+		line-height: 60px;  
+		font-size: 4rem;
+	}
+}
+
+.comments {
+	@include trailer();
+	@include adjust-font-size-to(14px);
+	display: inline-block;
+	color: $blue;
+
+	&:before {
+		color: $blueLight;
+		content: " ";
+		font-family: "entypo";
+		font-weight: 300;
+		font-size: 2em;
+	}
+
+	&:hover {
+		color: lighten($blue,10%);
+	}
+	
+	@include at-breakpoint($large) {
+		@include border-radius(30px);
+		background-color: $blue;
+		position: absolute;
+		margin-top: 3em;
+		margin-left: -($gutter-width*2.5);
+		height: 30px;
+		width: 30px;
+		text-align: center;
+		font-size: 12px;
+		font-family: $font-sans;
+		line-height: 30px;
+		color: $white;
+
+		&:before {
+			content: "";
+		}
+
+		&:hover {
+			background-color: $orange;
+			color: $white;
+		}
+	}
+
+	span {
+		display: inline-block;
+
+		@include at-breakpoint($large) {
+			display: none;
+		}
+	}
+}

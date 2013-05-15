@@ -1,0 +1,25 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    David Paulsson
+    Design, Front end
+    @davidpaulsson
+    http://davidpaulsson.se/
+
+    Håkan Edling
+    Piranha .NET, Back end wizard
+    @tidyui
+    http://www.tidyui.com/
+
+# THANKS
+
+    Entypo pictograms by Daniel Bruce — www.entypo.com
+
+# TECHNOLOGY COLOPHON
+
+    Piranha CMS, HTML5, 
+    CSS3(SASS & Compass), 
+    jQuery, Modernizr,
+    fitvid.js

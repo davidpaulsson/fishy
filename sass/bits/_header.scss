@@ -1,0 +1,47 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header[role="banner"] {
+	background-color: $white;
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-top: 6em;
+
+	@include at-breakpoint($medium) {
+		padding-top: 2.5em;
+	}
+
+	h1 {
+		margin: rhythm(1, 36px) 0 rhythm(1, 36px) 0; 
+		
+		&.title {
+			color: $blue;
+		}
+
+		// @include at-breakpoint($medium) {
+		// 	&:before {
+		// 		content: "💦";
+		// 		float: right;
+		// 		color: $blueLight;
+		// 		display: block;
+		// 		font-family: "entypo";
+		// 		font-size: 6em;
+		// 		margin-bottom: .3em;
+		// 	}
+		// }
+	}
+
+	h2 {
+		@include padding-trailer(1/2);
+		color: $blueLight;
+
+		@include at-breakpoint($medium) {
+			margin: 0 0 rhythm(1, 30px) 0; 
+		}
+	}
+}

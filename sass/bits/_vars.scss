@@ -1,0 +1,30 @@
+// Grid
+$total-columns:		4;
+$column-width:		4em;
+$gutter-width:		2em;
+$grid-padding:		$gutter-width;
+
+// Media queries breakpoints
+$medium:			40em 8;
+$large:				80em 12;
+
+// Typography baseline
+$base-font-size:	16px;
+$base-line-height:	24px;
+
+// Typography font stacks
+$font-sans:			'Droid Sans', sans-serif;
+$font-serif:		'Droid Serif', serif;
+
+// Colors
+$white:				#ffffff;
+$black:				#2e3641;
+$blue:				#9eb2c0;
+$blueLight:			#c1cfd9;
+$blueLighter:		#e9f0f4;
+$orange:			#f97e76;
+
+$twitter:			#00acee;
+$facebook:			#3b5998;
+$gplus:				#db4a39;
+$linkedin:			#0e76a8;

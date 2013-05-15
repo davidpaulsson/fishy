@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.readmore {
+	display: inline-block;
+	float: left;
+	clear: both;
+	padding: 5px 10px;
+	background-color: $blue;
+	color: $white;
+	text-transform: uppercase;
+	font-family: $font-sans;
+
+	@include at-breakpoint($medium) {
+		padding: 10px 20px;
+	}
+
+	&:hover {
+		background-color: $orange;
+		color: $white;
+	}
+}

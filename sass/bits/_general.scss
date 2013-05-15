@@ -1,0 +1,12 @@
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+
+body {
+	background-color: $blueLighter;
+	color: $black;
+}
+
+.fluid-width-video-wrapper {
+	@include trailer();
+}

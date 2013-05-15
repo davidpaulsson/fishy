@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Pagination
+   ========================================================================== */
+
+.pagination {
+	@include adjust-font-size-to(14px);
+	@include trailer(3);
+	text-align: center;
+	font-family: $font-sans;
+
+	ul {
+		display: inline-block;
+
+		li {
+			display: inline;
+
+			a {
+				color: $white;
+				float: left;
+				background-color: $blue;
+				padding: 3px 6px;
+				margin: 0 .2em;
+
+				@include at-breakpoint($medium) {
+					padding: 6px 12px;
+					margin: 0 .4em;
+				}
+
+				@include at-breakpoint($large) {
+					padding: 10px 20px;
+					margin: 0 .5em;
+				}
+
+				&:hover {
+					background-color: $blueLight;
+				}
+			}
+
+			&.active {
+				a {
+					background-color: $orange;
+				}
+			}
+
+			&.disabled {
+				a {
+					cursor: default;
+					background-color: $blueLight;
+				}
+			}
+		}  	
+	}
+}

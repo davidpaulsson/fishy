@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Scroll to top
+   ========================================================================== */
+
+#top-link {
+	@include border-radius(999px); // Way to many pixels to ensure it's round
+	position: fixed;
+	right: 1em;
+	bottom: 1em;
+	display: none;
+	height: 2em;
+	background-color: $white;
+	color: $black;
+	text-align: center;
+	line-height: 2em;
+	width: 2em;
+	z-index: 9999;
+
+	&:hover {
+		background-color: $orange;
+		color: $white;
+	}
+}

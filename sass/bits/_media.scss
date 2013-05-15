@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Media
+   ========================================================================== */
+
+.alignleft {
+	@include trailer();
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	@include trailer();
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	margin: 0 auto;
+	@include trailer();
+	clear: both;
+	display: block;
+}
+
+figure {
+	@include trailer();
+	display: table;
+
+	figcaption {
+		@include adjust-font-size-to(12px,.8);
+		@include padding-leader(1/2);
+		color: lighten($black,20%);
+		font-family: $font-sans;
+		clear: both;
+	}
+
+	img,
+	img.alignleft,
+	img.alignright,
+	img.aligncenter {
+		margin-bottom: 0;
+	}
+
+	&.alignleft {
+		display: inline;
+		float: left;
+		margin-right: 1.5em;
+
+		// figcaption {
+		// 	clear: both;
+		// 	margin-right: 1.5em;
+		// 	margin-left: 0;
+		// 	@include padding-leader(1/2);
+		// }
+	}
+	&.alignright {
+		display: inline;
+		float: right;
+		margin-left: 1.5em;
+
+		// figcaption {
+		// 	margin-left: 1.5em;
+		// 	margin-right: 0;
+		// 	@include padding-leader(1/2);
+		// }
+	}
+	&.aligncenter {
+		margin: 0 auto;
+		@include trailer();
+		clear: both;
+		display: block;
+
+		// figcaption {
+		// 	clear: both;
+		// 	margin: 0 auto;
+		// 	@include padding-leader(1/2);
+		// }
+	}
+}
+
+/* Make sure images, embeds and iframes fit their containers */
+
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+img {
+	@include trailer();
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}

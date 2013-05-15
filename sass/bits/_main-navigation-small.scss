@@ -1,0 +1,115 @@
+/* ==========================================================================
+Main navigation small
+========================================================================== */
+
+.navobile-mobile-only {
+	display: none;
+}
+
+#navobile-device-pixel {
+	width: 0;
+}
+
+@media screen and (min-width: 0px) and (max-width: 40em) { // 40em = $medium
+	html,
+	.navobile-bound {
+		overflow-x: hidden;
+		width: 100%;
+	}
+
+	.mobile-header-bar .wrapper {
+		@include clearfix();
+	}
+
+	.navobile-bound {
+		background-color: $blue;
+	}
+
+	#content {
+		background-color: $blueLighter;
+	}
+
+	#navobile-device-pixel {
+		width: 1px;
+	}
+
+	.navobile-mobile-only {
+		display: block;
+	}
+
+	.navobile-desktop-only {
+		display: none;
+	}
+
+	.mobile-header-bar {
+		background-color: $orange;
+		padding: .5em 0 .25em 0;
+
+		#show-navobile {
+			color: $white;
+			font-size: 48px;
+			font-weight: 300;
+			font-family: 'entypo';
+		}
+	}
+
+	.navobile-navigation {
+		height: 100%;
+		left: 0;
+		overflow: auto;
+		position: absolute;
+		top: 0;
+		width: 80%;
+		z-index: 1;
+
+		ul.nav-menu {
+			@include leader();
+			margin-right: 2em;
+		}
+
+		li {
+			float: none;
+
+			&.active a {
+				font-weight: 700;
+			}
+
+			a {
+				color: $black;
+				font-family: $font-sans;
+				font-weight: 300;
+				border-bottom: 1px solid $blueLight;
+				padding: .5em 0;
+				margin-right: 2em;
+				display: block;
+
+			}
+
+			ul {
+				margin-left: 0;
+			}
+		}
+	}
+
+	.navobile-content {
+		@include transition(transform 0.2s linear);
+		position: relative;
+		z-index: 3;
+	}
+
+	.csstransforms .navobile-content {
+		@include transform(translateX(0));
+	}
+
+	.csstransforms #content.navobile-content-hidden {
+		@include transform(translateX(80%));
+	}
+
+	.csstransforms3d .navobile-content {
+		@include transform(translate3d(0,0,0));
+	}
+
+	.csstransforms #content.navobile-content-hidden {
+		@include transform(translate3d(80%,0,0));
+	}
+}

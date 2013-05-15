@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Main navigation
+   ========================================================================== */
+
+.navigation-wrapper {
+	@include trailer(1);
+	@include at-breakpoint($medium) {
+		@include trailer(2);
+	}
+	@include at-breakpoint($large) {
+		@include trailer(4);
+	}
+	background-color: $blueLight;
+
+	li {
+		float: left;
+		font-family: $font-sans;
+		font-weight: 700;
+		position: relative;
+
+		&.active a,
+		&.active a:hover {
+			background-color: $blueLighter;
+			color: $black;
+		}
+
+		a {
+			color: $black;
+			display: inline-block;
+			padding: ($gutter-width/2);
+
+			&:hover {
+				background-color: $orange;
+				color: $white;
+			}
+		}
+	}
+
+	ul {
+
+		li:hover > ul {
+			display: block;
+		}
+
+		ul {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			background-color: $white;
+			display: none;
+			float: left;
+			position: absolute;
+			top: 3.5em;
+			left: -1.45em;
+			z-index: 99999;	
+
+			a {
+				width: 90.5%;
+
+				@include at-breakpoint($medium) {
+					width: 200px; 
+				}
+			}
+
+			ul {
+				display: none;
+
+				@include at-breakpoint($medium) {
+					left: 209px;
+					top: 0;
+				}
+			}
+		}
+	}
+}
